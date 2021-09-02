@@ -1,3 +1,4 @@
+//mở đóng khi ấn vào thanh menu nhạc
 var navCheck = document.querySelector(".header .nav-check");
 var goList = document.querySelector(".app-list");
 var outList = document.querySelector(".time-header")
@@ -14,6 +15,8 @@ function navigate(){
     }
 }
 
+
+
 const listSongs = document.querySelector(".listSongs");
 const btnToggle = document.querySelector(".btn-toggle");
 const faPlay = document.querySelector(".fa-play");
@@ -28,6 +31,8 @@ const btnPre = document.querySelector(".btn-pre")
 const btnRandom = document.querySelector(".btn-random ")
 const btnRepeat = document.querySelector(".btn-repeat");
 const aboutSong = document.querySelector(".aboutSong");
+
+//quay,dừng đĩa nhạc khi hát
 const pictureRotate = mainPicture.animate([
   {transform:'rotate(360deg)'}
 ],{
@@ -36,6 +41,7 @@ const pictureRotate = mainPicture.animate([
 })
 pictureRotate.pause()
 
+//phần code chính phần app
 const app = {
     isRepeat:false,
     isPlaying:0,
@@ -104,6 +110,7 @@ const app = {
             image: 'https://i.ytimg.com/vi/7vw84EkHOlY/maxresdefault.jpg',
           }
     ],
+    //hàm render nhạc ra màn hình
     render: function () {
         const htmls = this.songs.map(function(item,index){
             return `
@@ -124,6 +131,7 @@ const app = {
         listSongs.innerHTML = htmls.join("");
         
     },
+    //định nghĩa mới cho currentSong
     defineProperties: function(){
       Object.defineProperty(this,"currentSong",{
         get:function(){
@@ -131,6 +139,7 @@ const app = {
         }
       })
     },
+    //hàm lắng nghe tất cả event của app
     handleEvent:function(){
       // let isPlaying = 0;
       btnToggle.addEventListener("click",function(){
@@ -148,37 +157,37 @@ const app = {
           pictureRotate.play();
         }
       });
-
+      //lấy ra đc thời gian thực bài hát đang chạy
       audio.ontimeupdate = function(){
         if(audio.duration){
           const progressPercent = Math.floor(audio.currentTime / audio.duration *100);
           progress.value = progressPercent;
         }
       }
-
+      //tua
       progress.oninput = function(){
         const seektime = (audio.duration * (progress.value/100))
         audio.currentTime = seektime;
       }
-
+      //nhấn nút sang bài sau
       btnNext.onclick = function(){
           app.nextSong();
           app.render();
           // app.scrollToActiveSong();
           
       }
-
+      //nhấn sang bài trước
       btnPre.onclick = function(){
         app.preSong();
         app.render();
         // app.scrollToActiveSong();
       }
-
+      //nút random
       btnRandom.onclick = function(){
             app.isRandom = !app.isRandom;        
             btnRandom.classList.toggle("action", app.isRandom)
       }
-
+      //lắng nghe bài hát khi kết thúc
       audio.onended = function(){
         if(app.isRepeat){
           audio.play();
@@ -187,12 +196,12 @@ const app = {
         }
         
       }
-
+      //nút repeat
       btnRepeat.onclick = function(){
         app.isRepeat = !app.isRepeat;
         btnRepeat.classList.toggle("action",app.isRepeat)
       }
-
+      /khi click vào bài hát để chuyển bài cụ thể 
       listSongs.onclick = function(e){
         const clickSong = e.target.closest(".aboutSong:not(.activeSong)");
 
@@ -210,6 +219,7 @@ const app = {
             
         }
     },
+    //hàm load bài hiện tại
     loadCurrentSong:function(){
       mainPicture.innerHTML = `<img src="${this.currentSong.image}" alt="">`
       
@@ -217,6 +227,7 @@ const app = {
       <p>${this.currentSong.singer}</p>`
       audio.src = this.currentSong.path;
     },
+    //hàm phát bài tiếp theo
     nextSong:function(){
       if(this.isRandom){
         app.playRandom();
@@ -235,6 +246,7 @@ const app = {
             pictureRotate.play();
             
     },
+    //hàm lấy bài trước đó
     preSong:function(){
       if(this.isRandom){
         app.playRandom();
@@ -252,6 +264,7 @@ const app = {
             pictureRotate.play();
             
     },
+    //hàm random nhạc
     playRandom:function(){
       let newIndex;
         do{
@@ -267,6 +280,8 @@ const app = {
     //     block:"center",
     // })
     // },
+
+    //gọi lại các function 
     start:function(){
       this.defineProperties();
         this.render();
@@ -274,4 +289,5 @@ const app = {
         this.loadCurrentSong();
     }
 }
+//chạy chương trình
 app.start();
