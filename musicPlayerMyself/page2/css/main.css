@@ -1,0 +1,246 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* .container{
+    background-image: url(./img/background-body-img.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+} */
+.container{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    height: 650px;
+    background-image: url(./img/background-body-img.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.app{
+    width: 300px;
+    height: 500px;
+    background: linear-gradient(to top, #b7b5c9, #878bc5);
+    overflow: hidden;
+}
+
+.time{
+    width: 100%;
+    height: 40px;
+}
+.time p{
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+}
+/* .time p::after{
+    content: "";
+    border: 1px solid rgba(92, 117, 197, 0.61);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} */
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    /* background-color: yellow; */
+}
+.header span{
+    font-size: 20px;
+    color: white;
+    padding: 0 10px;
+}
+.header-text{
+    color: white;
+    margin: auto;
+}
+.header-text p{
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+.header-text h2{
+    font-size: 12px;
+    text-align: center;
+}
+.mainPicture{
+    display: flex;
+    margin: auto;
+    width: 150px;
+    margin-top: 10px;
+}
+.mainPicture img{
+    width: 100%;
+    height: 150px;
+    border-radius: 50%;
+    border-color: #333;
+    background-size: cover;
+    margin: auto;
+}
+.textAboutSong{
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+.textAboutSong h2{
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.textAboutSong p{
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+.control{
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    color: white;
+    margin: 20px 0;
+    align-items: center;
+}
+.control .btn-toggle{
+    font-size: 24px;
+    bac
+}
+.btn-toggle .icon-play.active{
+    display: block;
+}
+.btn-toggle .icon-play{
+    display: none;
+}
+.action{
+    color: rgb(231, 17, 17);
+}
+#progress{
+    display: flex;
+    width: 80%;
+    margin: auto;   
+}
+.app-list{
+    background: linear-gradient(to top, #050221, #2e3373);
+    /* opacity: 0.3; */
+    width: 300px;
+    height: 458px;
+    position: absolute;
+    top: 91px;
+    display: none;
+    animation: fadeIn linear 0.2s;
+    overflow: auto;
+    /* overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none; */
+    
+}
+.app-list::-webkit-scrollbar { 
+    /* width: 0 !important; */
+    display: none; 
+  }
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity:1}
+}
+.header2{
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 10px;
+    align-items: center;
+}
+.header2 h2{
+    font-size: 16px;
+    font-weight: 300;
+}
+.header2 span{
+    font-size: 16px;
+    font-weight: 700;
+}
+.header2 span:nth-child(2){
+    color: white;
+    position: relative;
+    right: -60px;
+    font-size: 30px;
+    align-items: center;
+}
+/* .boder-header2{
+    border: 1px solid white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} */
+
+.aboutSong{
+    display: flex;
+    padding-top: 10px;
+    border-bottom: 1px solid white;
+
+}
+.aboutSong.activeSong{
+    background-color: #99bb12;
+}
+.aboutSong-img {
+    flex: 0.25;
+    margin-bottom: 4px;
+   
+}
+.imgMain{
+    /* background-image: url(./img/img1.jpg); */
+    padding-top: 80%;
+    width: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+.aboutSong-text{
+    flex: 0.5;
+    color: white;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+.aboutSong-text h2{
+    font-size: 16px;
+    font-weight: 300;
+}
+.aboutSong-text h3{
+    font-size: 14px;
+    font-weight: 200;
+    color: rgb(104, 117, 158);
+}
+.aboutSong-text h4{
+    font-size: 12px;
+    font-weight: 200;
+    color: rgb(104, 117, 158,0.7);
+}
+.aboutSong-heart{
+    flex: calc(0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 4px;
+    position: relative;
+}
+.reacted{
+    color: rgb(211, 18, 44);
+}
+
+
+
+
