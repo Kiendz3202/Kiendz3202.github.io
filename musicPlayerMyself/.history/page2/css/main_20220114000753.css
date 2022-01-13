@@ -9,7 +9,6 @@ html{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    height: 100%;
 }
 
 /* .container{
@@ -22,7 +21,7 @@ html{
     display: flex;
     justify-content: center;
     padding-top: 50px;
-    height: 100vh;
+    height: 650px;
     background-image: url(./img/background-body-img.jpg);
     background-repeat: no-repeat;
     background-size:cover;
@@ -117,6 +116,7 @@ html{
 }
 .control .btn-toggle{
     font-size: 24px;
+    bac
 }
 .btn-toggle .icon-play.active{
     display: block;
