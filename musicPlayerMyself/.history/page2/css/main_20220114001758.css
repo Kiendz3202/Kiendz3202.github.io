@@ -79,31 +79,6 @@ html{
 }
 .nav-check:hover{
     cursor: pointer;
-    opacity: 0.5;
-}
-.btn-repeat{
-    cursor: pointer;
-    opacity: 0.5;
-}
-.btn-pre{
-    cursor: pointer;
-    opacity: 0.5;
-}
-.icon-play{
-    cursor: pointer;
-    opacity: 0.5;
-}
-.btn-next{
-    cursor: pointer;
-    opacity: 0.5;
-}
-.btn-random{
-    cursor: pointer;
-    opacity: 0.5;
-}
-.time-header{ 
-    cursor: pointer;
-    opacity: 0.5;
 }
 .mainPicture{
     display: flex;
@@ -158,8 +133,7 @@ html{
 #progress{
     display: flex;
     width: 80%;
-    margin: auto;
-    cursor: pointer;   
+    margin: auto;   
 }
 .app-list{
     background: linear-gradient(to top, #050221, #2e3373);
@@ -216,7 +190,7 @@ html{
     display: flex;
     padding-top: 10px;
     border-bottom: 1px solid white;
-    cursor: pointer;
+
 }
 .aboutSong.activeSong{
     background-color: #99bb12;

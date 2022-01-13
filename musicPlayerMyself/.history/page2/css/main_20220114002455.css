@@ -216,7 +216,7 @@ html{
     display: flex;
     padding-top: 10px;
     border-bottom: 1px solid white;
-    cursor: pointer;
+
 }
 .aboutSong.activeSong{
     background-color: #99bb12;

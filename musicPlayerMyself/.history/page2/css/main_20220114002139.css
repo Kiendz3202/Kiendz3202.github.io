@@ -101,10 +101,6 @@ html{
     cursor: pointer;
     opacity: 0.5;
 }
-.time-header{ 
-    cursor: pointer;
-    opacity: 0.5;
-}
 .mainPicture{
     display: flex;
     margin: auto;
@@ -216,7 +212,7 @@ html{
     display: flex;
     padding-top: 10px;
     border-bottom: 1px solid white;
-    cursor: pointer;
+
 }
 .aboutSong.activeSong{
     background-color: #99bb12;

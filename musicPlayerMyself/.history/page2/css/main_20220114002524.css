@@ -123,6 +123,7 @@ html{
     text-align: center;
     margin-top: 10px;
     color: white;
+    cursor: pointer;
 }
 .textAboutSong h2{
     font-size: 18px;
@@ -216,7 +217,7 @@ html{
     display: flex;
     padding-top: 10px;
     border-bottom: 1px solid white;
-    cursor: pointer;
+
 }
 .aboutSong.activeSong{
     background-color: #99bb12;
