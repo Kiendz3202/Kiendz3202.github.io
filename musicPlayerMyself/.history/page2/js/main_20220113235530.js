@@ -48,12 +48,12 @@ const app = {
   currentIndex: 0,
   isRandom: false,
   songs: [
-    // {
-    //   name: 'Nevada',
-    //   singer: 'Vicetone',
-    //   path: 'https://aredir.nixcdn.com/NhacCuaTui924/Nevada-Vicetone-4494556.mp3?st=_IjpS9u0LjapNgzm058wVw&e=1623143773',
-    //   image: 'https://i.pinimg.com/originals/f8/6f/33/f86f3378e656883b33594f06d78d1634.jpg',
-    // },
+    {
+      name: 'Nevada',
+      singer: 'Vicetone',
+      path: 'https://aredir.nixcdn.com/NhacCuaTui924/Nevada-Vicetone-4494556.mp3?st=_IjpS9u0LjapNgzm058wVw&e=1623143773',
+      image: 'https://i.pinimg.com/originals/f8/6f/33/f86f3378e656883b33594f06d78d1634.jpg',
+    },
     {
       name: 'Light It Up',
       singer: 'Robin Hustin x TobiMorrow',
